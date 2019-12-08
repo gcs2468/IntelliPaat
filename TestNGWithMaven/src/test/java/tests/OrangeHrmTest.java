@@ -2,9 +2,9 @@ package tests;
 
 import base.PropertyConstants;
 import base.TestBase;
-import org.testng.annotations.Test;
 import pages.OrangeHrmPagePFM;
-import static org.assertj.core.api.Assertions.*;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;;
 
 
 public class OrangeHrmTest extends TestBase {
@@ -12,7 +12,7 @@ public class OrangeHrmTest extends TestBase {
 
     @Test(priority=1)
     public void m1() throws InterruptedException {
-
+        SoftAssert sa = new SoftAssert();
 
         OrangeHrmPagePFM orangeHrmPagePFM = new OrangeHrmPagePFM(driver, properties, seleniumUtils);
 
@@ -23,13 +23,15 @@ public class OrangeHrmTest extends TestBase {
         orangeHrmPagePFM.login();
 
         Thread.sleep(5000);
-        assertThat(orangeHrmPagePFM.getSignOFF().equals("Welcome"));
+        String admin = orangeHrmPagePFM.getSignOFF();
+        sa.assertEquals(admin,"Welcome");
 
         orangeHrmPagePFM.logout();
     }
 
     @Test(priority=2)
     public void m2() throws InterruptedException {
+        SoftAssert sa = new SoftAssert();
         OrangeHrmPagePFM orangeHrmPagePFM = new OrangeHrmPagePFM(driver, properties, seleniumUtils);
 
         seleniumUtils.getUrl(properties.getProperty(PropertyConstants.URL));
@@ -38,7 +40,9 @@ public class OrangeHrmTest extends TestBase {
         orangeHrmPagePFM.login();
 
         Thread.sleep(5000);
-        assertThat(orangeHrmPagePFM.getSignOFF().equals("Welcome Admin"));
+        String admin = orangeHrmPagePFM.getSignOFF();
+        //assertThat(orangeHrmPagePFM.getSignOFF().equals("Welcome Admin"));
+        sa.assertEquals(admin,"Welcome Admin");
 
         orangeHrmPagePFM.logout();
 

@@ -7,8 +7,8 @@ Serenity strongly encourages good test automation design, and supports several d
 
 The latest version of Serenity supports both Cucumber 2.4 and the more recent Cucumber 4.x. Cucumber 4 is not backward compatible with Cucumber 2. If you would like to learn more about Serenity and Cucumber 4, take a look at [the Serenity BDD/Cucumber 4 Starter Project](https://github.com/serenity-bdd/serenity-cucumber4-starter).
 
-## The starter project
-The best place to start with Serenity and Cucumber is to clone or download the starter project on Github ([https://github.com/serenity-bdd/serenity-cucumber-starter](https://github.com/serenity-bdd/serenity-cucumber-starter)). This project gives you a basic project setup, along with some sample tests and supporting classes. There are two versions to choose from. The master branch uses a more classic approach, using action classes and lightweight page objects, whereas the **[screenplay](https://github.com/serenity-bdd/serenity-cucumber-starter/tree/screenplay)** branch shows the same sample test implemented using Screenplay.
+## The automation project
+The best place to start with Serenity and Cucumber is to clone or download the automation project on Github ([https://github.com/serenity-bdd/serenity-cucumber-automation](https://github.com/serenity-bdd/serenity-cucumber-starter)). This project gives you a basic project setup, along with some sample tests and supporting classes. There are two versions to choose from. The master branch uses a more classic approach, using action classes and lightweight page objects, whereas the **[screenplay](https://github.com/serenity-bdd/serenity-cucumber-starter/tree/screenplay)** branch shows the same sample test implemented using Screenplay.
 
 ### The project directory structure
 The project has build scripts for both Maven and Gradle, and follows the standard directory structure used in most Serenity projects:
@@ -144,8 +144,8 @@ class SearchResultList {
 
 The main advantage of the approach used in this example is not in the lines of code written, although Serenity does reduce a lot of the boilerplate code that you would normally need to write in a web test. The real advantage is in the use of many small, stable classes, each of which focuses on a single job. This application of the _Single Responsibility Principle_ goes a long way to making the test code more stable, easier to understand, and easier to maintain.
 
-## The Screenplay starter project
-If you prefer to use the Screenplay pattern, or want to try it out, check out the _screenplay_ branch instead of the _master_ branch. In this version of the starter project, the same scenario is implemented using the Screenplay pattern. 
+## The Screenplay automation project
+If you prefer to use the Screenplay pattern, or want to try it out, check out the _screenplay_ branch instead of the _master_ branch. In this version of the automation project, the same scenario is implemented using the Screenplay pattern. 
 
 The Screenplay pattern describes tests in terms of actors and the tasks they perform. Tasks are represented as objects performed by an actor, rather than methods. This makes them more flexible and composable, at the cost of being a bit more wordy. Here is an example:
 ```java

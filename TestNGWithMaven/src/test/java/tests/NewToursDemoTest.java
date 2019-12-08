@@ -53,8 +53,8 @@ public class NewToursDemoTest extends TestBase {
         seleniumUtils.waitForPageLoad(driver);
 
         String signOFF = newToursDemoPagePOM.getSignOFF();
-        Reporter.log("SignOff text from appln is :: "+signOFF);
-        Assert.assertEquals(signOFF,"SIGN-OF");
+        Reporter.log("SignOff text from appln is :: "+signOFF); // SIGN-OFF
+        Assert.assertEquals(signOFF,"SIGN-OF"); //
 
         newToursDemoPagePOM.logououtNewTours();
 
@@ -90,5 +90,6 @@ public class NewToursDemoTest extends TestBase {
         Reporter.log("*** End of Priority 3 ***", true);
         Reporter.log("", true);
     }
+
 
 }
