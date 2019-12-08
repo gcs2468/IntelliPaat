@@ -15,15 +15,19 @@
 
 
     <!-- To run all specific test class -->
-   <!-- <test name="Create_Validate Web Ecatalog">
+    <test name="Create_Validate Web Ecatalog">
 
         <classes>
 
-            <class name="tests.OrangeHrmTest"></class>
+            <class name="tests.OrangeHrmTest">
+                <methods>
+                    <include name=""></include>
+                </methods>
+            </class>
             <class name="tests.NewToursDemoTest"></class>
 
         </classes>
 
-    </test>-->
+    </test>
 
 </suite>
