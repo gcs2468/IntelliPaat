@@ -4,7 +4,18 @@
 
 <suite name="Create_Validate Web Ecatalog">
 
-    <test name="Create_Validate Web Ecatalog">
+
+    <!-- To run all xml files in single run-->
+    <suite-files>
+
+        <suite-file path="src/test/resources/suiteXml/Smoke.xml"></suite-file>
+        <suite-file path="src/test/resources/suiteXml/Sanity.xml"></suite-file>
+
+    </suite-files>
+
+
+    <!-- To run all specific test class -->
+   <!-- <test name="Create_Validate Web Ecatalog">
 
         <classes>
 
@@ -13,6 +24,6 @@
 
         </classes>
 
-    </test>
+    </test>-->
 
 </suite>

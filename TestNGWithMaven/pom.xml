@@ -66,15 +66,15 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>1.7.0</version>
+            <version>3.13.2</version>
         </dependency>
 
     </dependencies>
 
     <properties>
 
-        <suiteXml>NewToursDemo.xml</suiteXml>
-        <suiteXml>OrangeHrmDemo.xml</suiteXml>
+        <!--<suiteXml>NewToursDemo.xml</suiteXml>
+        <suiteXml>OrangeHrmDemo.xml</suiteXml>-->
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -106,8 +106,8 @@
 
                 <configuration>
                     <suiteXmlFiles>
-                       <!-- <suiteXmlFile>testng.xml</suiteXmlFile>-->
-                        <suiteXmlFile>src/test/resources/suiteXml/${suiteXml}</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <!--<suiteXmlFile>src/test/resources/suiteXml/${suiteXml}</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
 
